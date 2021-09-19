@@ -1,23 +1,37 @@
-# Template repository for creating new Python libraries
+# django-serve-gunicorn
 
-This GitHub [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template) can be used to create a new repository with the skeleton of a Python library, based on the [python-lib](https://github.com/simonw/python-lib) cookiecutter.
+[![PyPI](https://img.shields.io/pypi/v/django-serve-gunicorn.svg)](https://pypi.org/project/django-serve-gunicorn/)
+[![Changelog](https://img.shields.io/github/v/release/simonw/django-serve-gunicorn?include_prereleases&label=changelog)](https://github.com/simonw/django-serve-gunicorn/releases)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/simonw/django-serve-gunicorn/blob/main/LICENSE)
 
-Start here: https://github.com/simonw/python-lib-template-repository/generate
+Management command to start a gunicorn server for a Django project
 
-The name of your repository will be the name of the Python package that you publish to [PyPI](https://pypi.org/), so make sure that name is not taken already!
+## Installation
 
-Add a one-line description of your repository, then click "Create repository from template".
+Install this library using `pip`:
 
-![Screenshot of the create repository interface](https://user-images.githubusercontent.com/9599/131230293-7ed5760e-b385-407e-bbf1-c6fc7540d3fe.png)
+    $ pip install django-serve-gunicorn
 
-Once created, your new repository will execute a GitHub Actions workflow that uses cookiecutter to rewrite the repository to the desired state. This make take 30 seconds or so.
+## Usage
 
-You can see an example of a repository generated using this template here:
+Usage instructions go here.
 
-- https://github.com/simonw/python-lib-template-repository-demo
+## Development
 
-## Enabling workflows in your new repository
+To contribute to this library, first checkout the code. Then create a new virtual environment:
 
-GitHub Actions like this are not allowed to create new workflows themselves.
+    cd django-serve-gunicorn
+    python -mvenv venv
+    source venv/bin/activate
 
-Your new repository will have a folder in it called `.github/rename-this-to-workflows` - rename that folder to `.github/workflows` to enable the `test.yml` and `publish.yml` workflows, which can then run tests for your plugin and publish new GitHub releases to PyPI, as [described here](https://github.com/simonw/python-lib#publishing-your-library-as-a-package-to-pypi).
+Or if you are using `pipenv`:
+
+    pipenv shell
+
+Now install the dependencies and test dependencies:
+
+    pip install -e '.[test]'
+
+To run the tests:
+
+    pytest
