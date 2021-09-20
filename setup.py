@@ -27,7 +27,7 @@ setup(
     license="Apache License, Version 2.0",
     version=VERSION,
     packages=["django_serve_gunicorn"],
-    install_requires=[],
+    install_requires=["django", "gunicorn"],
     extras_require={"test": ["pytest"]},
     tests_require=["django-serve-gunicorn[test]"],
     python_requires=">=3.6",
